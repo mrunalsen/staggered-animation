@@ -8,15 +8,8 @@ body {
     height: 100%;
     box-sizing: border-box;
     letter-spacing: .5px;
-
-}
-
-body {
-    color: white;
-    background: black;
     font-family: 'Inter', sans-serif;
 }
-
 
 /* Section Base CSS */
 section {
