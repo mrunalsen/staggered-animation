@@ -1,0 +1,71 @@
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* Basic HTML and Body CSS */
+html,
+body {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    letter-spacing: .5px;
+
+}
+
+body {
+    color: white;
+    background: black;
+    font-family: 'Inter', sans-serif;
+}
+
+
+/* Section Base CSS */
+section {
+    display: grid;
+    place-items: center;
+    align-content: center;
+    min-height: 101vh;
+    padding: 0 2rem;
+}
+
+/* Custom CSS classes for Animation */
+.hidden {
+    opacity: 0;
+    transition: all 1s;
+    filter: blur(5px);
+    transform: translateX(-100%);
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+/* Cards */
+.cards>img {
+    height: 372px;
+    width: 372px;
+}
+
+/* Gave different transition delay to individual cards for staggered animation */
+.cards:nth-child(2) {
+    transition-delay: 300ms;
+}
+
+.cards:nth-child(3) {
+    transition-delay: 500ms;
+}
+
+.cards:nth-child(4) {
+    transition-delay: 700ms;
+}
+
+/* Here we gave reduced motion in the media query to apply if the user's settings are set to reduced motion
+as not everyone wants to see your animation over and over
+ 
+ no-preference - Indicates that the user has made no preference known to the system. */
+@media(prefers-reduced-motion) {
+    .hidden {
+        transition: none;
+    }
+}
